@@ -27,7 +27,7 @@ public class Distribuidora extends Application {
         abrirTela("Login.fxml", Login.class);
     }
     
-    public void abrirTela(String view, Class c){
+    public static void abrirTela(String view, Class c){
         Parent parent = null;
         try {
             parent = FXMLLoader.load(c.getResource(view));

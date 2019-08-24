@@ -8,7 +8,9 @@ package Distribuidora;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
@@ -23,10 +25,17 @@ public class Main {
 
     @FXML
     private URL location;
+    
+    @FXML
+    private Label lbText;
 
     @FXML
     public void initialize() {
-
+    }
+    
+    @FXML
+    private void testeVenda(ActionEvent event) {
+        lbText.setText("Gabriel 2");
     }
     
     

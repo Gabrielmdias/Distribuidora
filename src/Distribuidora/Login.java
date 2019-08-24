@@ -20,6 +20,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -46,25 +47,27 @@ public class Login implements Initializable {
     
     @FXML
     private void testeBotao(ActionEvent event) {
-        System.out.println(tfUsuario.getText());
-        System.out.println(pwfSenha.getText());
         UsuarioDAO udao = new UsuarioDAO();
-        Usuario u = new Usuario();
         
         try {
-            System.out.println(udao.findName("ab").getNome());
+            Usuario u = udao.findName(tfUsuario.getText().toUpperCase());
+            if(u.getSenha().equals(pwfSenha.getText())){
+                ((Node) event.getSource()).getScene().getWindow().hide();// fechar tela atual
+                Distribuidora.abrirTela("Main.fxml", Main.class);
+            }else{
+//                System.out.println("Senha inválida!");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("Senha");
+                alert.setContentText("Senha inválida!");
+                alert.show();
+            }
         } catch (NullPointerException e) {
-            System.out.println("Usuário não encontrado!");
+//            System.out.println("Usuário não encontrado!");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("Usuário");
+            alert.setContentText("Usuário não encontrado!");
+            alert.show();
         }
-
-
-
-//        Distribuidora.loadScene("Main.fxml");
-        
-        Distribuidora d = new Distribuidora();
-        ((Node) event.getSource()).getScene().getWindow().hide();// fechar tela atual
-        d.abrirTela("Main.fxml", Main.class);
-       
     }
     
     @Override
