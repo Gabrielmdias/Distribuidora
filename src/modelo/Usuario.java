@@ -17,31 +17,32 @@ import javax.persistence.Id;
  * @author Gabriel
  */
 @Entity
-public class Usuario implements Serializable {
+public class Usuario implements Serializable, EntidadeBase {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idUsuario;
+    private Long id;
     @Column
-    private String nome;
+    private String usuario;
     @Column
     private String senha;
 
-    public Long getIdUsuario() {
-        return idUsuario;
+    @Override
+    public Long getId() {
+        return id;
     }
 
-    public void setIdUsuario(Long idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getUsuario() {
+        return usuario;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(String usuario) {
+        this.usuario = usuario;
     }
 
     public String getSenha() {
@@ -55,7 +56,7 @@ public class Usuario implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idUsuario != null ? idUsuario.hashCode() : 0);
+        hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
 
@@ -66,7 +67,7 @@ public class Usuario implements Serializable {
             return false;
         }
         Usuario other = (Usuario) object;
-        if ((this.idUsuario == null && other.idUsuario != null) || (this.idUsuario != null && !this.idUsuario.equals(other.idUsuario))) {
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
         return true;
@@ -74,7 +75,7 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "modelo.Usuario[ id=" + idUsuario + " ]";
+        return "modelo.Usuario[ id=" + id + " ]";
     }
     
 }

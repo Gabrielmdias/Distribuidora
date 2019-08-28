@@ -5,7 +5,6 @@
  */
 package Distribuidora;
 
-
 import Distribuidora.Distribuidora;
 import distribuidoraDAO.UsuarioDAO;
 import java.io.IOException;
@@ -24,6 +23,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -35,26 +36,26 @@ import modelo.Usuario;
  * @author Gabriel
  */
 public class Login implements Initializable {
-    
+
     @FXML
     private TextField tfUsuario;
-    
+
     @FXML
-    private PasswordField pwfSenha;    
-    
+    private PasswordField pwfSenha;
+
     @FXML
     private Button btEntrar;
-    
+
     @FXML
-    private void testeBotao(ActionEvent event) {
+    private void entrarMouse(ActionEvent event) {
         UsuarioDAO udao = new UsuarioDAO();
-        
+
         try {
             Usuario u = udao.findName(tfUsuario.getText().toUpperCase());
-            if(u.getSenha().equals(pwfSenha.getText())){
+            if (u.getSenha().equals(pwfSenha.getText())) {
                 ((Node) event.getSource()).getScene().getWindow().hide();// fechar tela atual
                 Distribuidora.abrirTela("Main.fxml", Main.class);
-            }else{
+            } else {
 //                System.out.println("Senha inválida!");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText("Senha");
@@ -69,11 +70,37 @@ public class Login implements Initializable {
             alert.show();
         }
     }
-    
+
+    @FXML
+    private void entrarEnter(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+            UsuarioDAO udao = new UsuarioDAO();
+
+            try {
+                Usuario u = udao.findName(tfUsuario.getText().toUpperCase());
+                if (u.getSenha().equals(pwfSenha.getText())) {
+                    ((Node) event.getSource()).getScene().getWindow().hide();// fechar tela atual
+                    Distribuidora.abrirTela("Main.fxml", Main.class);
+                } else {
+//                System.out.println("Senha inválida!");
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setHeaderText("Senha");
+                    alert.setContentText("Senha inválida!");
+                    alert.show();
+                }
+            } catch (NullPointerException e) {
+//            System.out.println("Usuário não encontrado!");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("Usuário");
+                alert.setContentText("Usuário não encontrado!");
+                alert.show();
+            }
+        }
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
-    
+    }
+
 }
