@@ -43,24 +43,24 @@ public class Distribuidora extends Application {
         stage.setScene(scene);
         stage.show();
         
-        java.util.Date dataUtil = new java.util.Date();  
-        java.sql.Date dataSql = new java.sql.Date(dataUtil.getTime()); 
-        System.out.println(dataUtil);
-        System.out.println("'''''''''''''''''''''");
-        System.out.println(dataSql);
-        
-        Cliente c1 = new Cliente();
-        c1.setNome("Gabriel");
-        c1.setCpf("11122233344");
-        c1.setEndereco("rua tiete");
-        c1.setNumero(711);
-        c1.setCep("87020210");
-        c1.setEmail("gabrieldiasmartinelli@gmail.com");
-        c1.setTelefone("4430319203");
-        c1.setCelular("44999571190");
-        c1.setDataCadastro(dataSql);
-        ClienteDAO cdao = new ClienteDAO();
-        cdao.save(c1);
+//        java.util.Date dataUtil = new java.util.Date();  
+//        java.sql.Date dataSql = new java.sql.Date(dataUtil.getTime()); 
+//        System.out.println(dataUtil);
+//        System.out.println("'''''''''''''''''''''");
+//        System.out.println(dataSql);
+//        
+//        Cliente c1 = new Cliente();
+//        c1.setNome("Gabriel");
+//        c1.setCpf("11122233344");
+//        c1.setEndereco("rua tiete");
+//        c1.setNumero(711);
+//        c1.setCep("87020210");
+//        c1.setEmail("gabrieldiasmartinelli@gmail.com");
+//        c1.setTelefone("4430319203");
+//        c1.setCelular("44999571190");
+//        c1.setDataCadastro(dataSql);
+//        ClienteDAO cdao = new ClienteDAO();
+//        cdao.save(c1);
     }
     
 

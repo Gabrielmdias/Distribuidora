@@ -1,12 +1,21 @@
 * {
-    -fx-primary : #FFFFFF; /*#2A2E37;*/
-    -fx-secondary : #2A2E37;/*#e8ebff;*/
-    -fx-primarytext : #2A2E37;/*#B2B2B2;*/
+    -fx-primary : #FFFFFF; 
+    -fx-secondary : #2A2E37; /*#e8ebff;*/
+    -fx-primarytext : #2A2E37;
     -fx-blue: #1976D2;
     -fx-red: #FF0000;
     -fx-color-1:#1976D2;
 }
 
+/**{
+    -fx-primary : #2A2E37;
+    -fx-secondary : #FFFF8D;
+    -fx-primarytext : #B2B2B2;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+    -fx-color-1:#1976D2;
+
+}*/
 .root{
     -fx-background-color: -fx-primary;
 }

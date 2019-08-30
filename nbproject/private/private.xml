@@ -5,13 +5,15 @@
         <group>
             <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/distribuidoraDAO/UsuarioDAO.java</file>
             <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/Distribuidora/Distribuidora.java</file>
-            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/resources/dark-theme.css</file>
-            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/distribuidoraDAO/GenericDAO.java</file>
-            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/modelo/EntidadeBase.java</file>
-            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/Distribuidora/Main.java</file>
-            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/Distribuidora/Login.fxml</file>
-            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/modelo/Usuario.java</file>
-            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/connectionDB/ConnectionDB.java</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/distribuidoraDAO/ClienteDAO.java</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/resources/TextFieldFormatter.java</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/Distribuidora/Cliente.fxml</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/Distribuidora/Login.java</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/Distribuidora/Main.fxml</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/Distribuidora/ClienteController.java</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/modelo/Cliente.java</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/resources/Util.java</file>
+            <file>file:/C:/Users/Gabriel/Documents/NetBeansProjects/Distribuidora/src/resources/AlertMaker.java</file>
         </group>
     </open-files>
 </project-private>

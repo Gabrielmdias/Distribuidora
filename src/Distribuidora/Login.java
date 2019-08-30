@@ -30,6 +30,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import modelo.Usuario;
+import resources.AlertMaker;
 
 /**
  *
@@ -54,47 +55,20 @@ public class Login implements Initializable {
             Usuario u = udao.findName(tfUsuario.getText().toUpperCase());
             if (u.getSenha().equals(pwfSenha.getText())) {
                 ((Node) event.getSource()).getScene().getWindow().hide();// fechar tela atual
-                Distribuidora.abrirTela("Main.fxml", Main.class);
+                Distribuidora.abrirTela("Cliente.fxml", ClienteController.class);
             } else {
-//                System.out.println("Senha inválida!");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setHeaderText("Senha");
-                alert.setContentText("Senha inválida!");
-                alert.show();
+//                Alert alert = new Alert(Alert.AlertType.ERROR);
+//                alert.setHeaderText("Senha");
+//                alert.setContentText("Senha inválida!");
+//                alert.show();
+                AlertMaker.showErrorMessage("Senha", "Senha inválida!");
             }
         } catch (NullPointerException e) {
-//            System.out.println("Usuário não encontrado!");
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText("Usuário");
-            alert.setContentText("Usuário não encontrado!");
-            alert.show();
-        }
-    }
-
-    @FXML
-    private void entrarEnter(KeyEvent event) {
-        if (event.getCode() == KeyCode.ENTER) {
-            UsuarioDAO udao = new UsuarioDAO();
-
-            try {
-                Usuario u = udao.findName(tfUsuario.getText().toUpperCase());
-                if (u.getSenha().equals(pwfSenha.getText())) {
-                    ((Node) event.getSource()).getScene().getWindow().hide();// fechar tela atual
-                    Distribuidora.abrirTela("Main.fxml", Main.class);
-                } else {
-//                System.out.println("Senha inválida!");
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setHeaderText("Senha");
-                    alert.setContentText("Senha inválida!");
-                    alert.show();
-                }
-            } catch (NullPointerException e) {
-//            System.out.println("Usuário não encontrado!");
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setHeaderText("Usuário");
-                alert.setContentText("Usuário não encontrado!");
-                alert.show();
-            }
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            alert.setHeaderText("Usuário");
+//            alert.setContentText("Usuário não encontrado!");
+//            alert.show();
+            AlertMaker.showErrorMessage("Usuário", "Usuário não encontrado!");
         }
     }
 

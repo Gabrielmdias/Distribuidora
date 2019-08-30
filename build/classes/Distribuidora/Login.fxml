@@ -30,7 +30,7 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </FontAwesomeIconView>
-            <TextField fx:id="tfUsuario" alignment="TOP_LEFT" onAction="#entrarEnter" prefHeight="39.0" prefWidth="254.0" promptText="Usuário" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+            <TextField fx:id="tfUsuario" alignment="TOP_LEFT" onAction="#entrarMouse" prefHeight="39.0" prefWidth="254.0" promptText="Usuário" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="18.0" />
                </font>
@@ -52,7 +52,7 @@
          </padding>
          <children>
             <FontAwesomeIconView glyphName="KEY" size="23" />
-            <PasswordField fx:id="pwfSenha" onAction="#entrarEnter" promptText="Senha" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+            <PasswordField fx:id="pwfSenha" onAction="#entrarMouse" promptText="Senha" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="18.0" />
                </font>
