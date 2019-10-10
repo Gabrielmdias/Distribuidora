@@ -28,7 +28,7 @@ public class Distribuidora extends Application {
     
     @Override
     public void start(Stage primaryStage) throws IOException {
-        abrirTela("Login.fxml", Login.class);
+        abrirTela("/view/Login.fxml", Login.class);
     }
     
     public static void abrirTela(String view, Class c){

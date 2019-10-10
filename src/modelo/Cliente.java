@@ -47,6 +47,16 @@ public class Cliente implements Serializable, EntidadeBase {
     @Column(name = "data_cadastro")
     private Date dataCadastro;
     
+    public Cliente() {
+    }
+    
+    public Cliente(Long id, String nome, String celular, String email) {
+        this.id = id;
+        this.nome = nome;
+        this.celular = celular;
+        this.email = email;
+    }
+    
 
     @Override
     public Long getId() {

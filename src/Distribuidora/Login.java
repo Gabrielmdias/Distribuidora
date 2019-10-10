@@ -55,7 +55,7 @@ public class Login implements Initializable {
             Usuario u = udao.findName(tfUsuario.getText().toUpperCase());
             if (u.getSenha().equals(pwfSenha.getText())) {
                 ((Node) event.getSource()).getScene().getWindow().hide();// fechar tela atual
-                Distribuidora.abrirTela("Cliente.fxml", ClienteController.class);
+                Distribuidora.abrirTela("/view/Main.fxml", Main.class);
             } else {
 //                Alert alert = new Alert(Alert.AlertType.ERROR);
 //                alert.setHeaderText("Senha");

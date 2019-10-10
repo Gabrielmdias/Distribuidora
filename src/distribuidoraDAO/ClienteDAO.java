@@ -5,7 +5,11 @@
  */
 package distribuidoraDAO;
 
+import connectionDB.ConnectionDB;
+import java.util.List;
+import javax.persistence.EntityManager;
 import modelo.Cliente;
+import modelo.Usuario;
 
 /**
  *
@@ -13,4 +17,14 @@ import modelo.Cliente;
  */
 public class ClienteDAO extends GenericDAO<Cliente>{
     
+    public List<Cliente> findAll(){
+        EntityManager em = new ConnectionDB().getConnection();
+        List<Cliente> clientes = null;
+        try {
+            clientes = em.createQuery("select c from Cliente c").getResultList();
+        } catch (Exception e) {
+            System.err.print(e);
+        }
+        return clientes;
+    }
 }

@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Distribuidora.jar" size="166575" download="eager" />
+    <jar href="Distribuidora.jar" size="171615" download="eager" />
     <jar href="lib\FastInfoset-1.2.15.jar" size="311876" download="eager" />
     <jar href="lib\antlr-2.7.7.jar" size="445288" download="eager" />
     <jar href="lib\byte-buddy-1.9.11.jar" size="3274079" download="eager" />
